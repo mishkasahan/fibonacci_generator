@@ -1,10 +1,7 @@
-def fibonacci_generator(n):
-    a, b = 0, 1
-    for i in range(n):
-        yield a
-        a, b = b, a + b
+def generator(n):
+    for i in range(1, n+1):
+        yield i*i
 
-
-fib_gen = fibonacci_generator(10)
+b = generator(10)
 for i in range(10):
-    print(next(fib_gen))
+    print(next(b))
